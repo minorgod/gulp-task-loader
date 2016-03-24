@@ -19,9 +19,17 @@ function getDefaults() {
 	};
 }
 
+function cleanDir(options) {
+	options.dir = options.dir.replace(/^\.\//, '');
+}
+
 module.exports = function(options) {
 	if (isString(options)) {
 		options = { dir: options };
+	}
+
+	if (options) {
+		cleanDir(options);
 	}
 
 	var opts = assign(getDefaults(), options);
@@ -80,6 +88,6 @@ module.exports = function(options) {
 				});
 		}
 	}
-	
+
 	loadTasks(opts.dir);
 };
