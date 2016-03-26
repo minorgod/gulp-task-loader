@@ -6,7 +6,8 @@ Gulp Task Loader
 [![Dependency Status](https://david-dm.org/hontas/gulp-task-loader.svg)](https://david-dm.org/hontas/gulp-task-loader)
 [![DevDependency Status](https://david-dm.org/hontas/gulp-task-loader/dev-status.svg)](https://david-dm.org/hontas/gulp-task-loader#info=devDependencies)
 [![PeerDependency Status](https://david-dm.org/hontas/gulp-task-loader/peer-status.svg)](https://david-dm.org/hontas/gulp-task-loader#info=peerDependencies)
-[![Build Status](https://travis-ci.org/hontas/gulp-task-loader.svg?branch=master)](https://travis-ci.org/hontas/gulp-task-loader)
+[![Build Status](https://travis-ci.org/minorgod/gulp-task-loader.svg?branch=gulp-4)](https://travis-ci.org/minorgod/gulp-task-loader)
+
 
 # Install
 
