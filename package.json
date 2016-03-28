@@ -19,8 +19,8 @@
   ],
   "author": "Pontus Lundin",
   "license": "MIT",
-  "peerDependencies": {
-    "gulp": "gulpjs/gulp.git#4.0"
+  "peerDependenciesDisabled": {
+    "gulp": "*"
   },
   "devDependencies": {
     "chai": "^3.4.1",
