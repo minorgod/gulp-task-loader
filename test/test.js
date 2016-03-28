@@ -5,11 +5,13 @@ var gulp = require('gulp');
 var expect = require('chai').expect;
 
 function getTask(taskName) {
-	return gulp.tasks[taskName];
+	var task = gulp.registry().get(taskName);
+	return task;
 }
 
 function callTask(taskName) {
-	return getTask(taskName).fn();
+	var task = getTask(taskName);
+	return task();
 }
 
 function resetTasks() {
