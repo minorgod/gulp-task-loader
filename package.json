@@ -20,7 +20,7 @@
   "author": "Pontus Lundin",
   "license": "MIT",
   "peerDependencies": {
-    "gulp": "*"
+    "gulp": "gulpjs/gulp.git#4.0"
   },
   "devDependencies": {
     "chai": "^3.4.1",
