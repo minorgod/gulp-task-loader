@@ -63,7 +63,7 @@ module.exports = function(options) {
 		var stats = fs.lstatSync(currentPath);
 
 		if (stats.isFile() && byExtension(file)) {
-			loadTask(currentPath.split('/').slice(opts.dir.split('/').length, -1), file);
+			loadTask(currentPath.split(path.sep).slice(opts.dir.split('/').length, -1), file);
 		}
 		else if (stats.isDirectory()) {
 			fs.readdirSync(currentPath)
