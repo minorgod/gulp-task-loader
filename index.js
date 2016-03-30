@@ -35,6 +35,10 @@ module.exports = function(options) {
 		var extension = path.extname(fileName);
 		return path.basename(fileName, extension);
 	}
+	
+	function normalizeSlashes(currentPath){
+		return currentPath.split('\\').join('/');
+	}
 
 	function loadTask(parents, task) {
 		var modulePath = path.join(process.cwd(), opts.dir, parents.join('/') || '', task);
@@ -59,11 +63,15 @@ module.exports = function(options) {
 	}
 
 	function loadTasks(currentPath) {
+		
+		currentPath = normalizeSlashes(currentPath);
+		
 		var file = path.basename(currentPath);
 		var stats = fs.lstatSync(currentPath);
+			
 
 		if (stats.isFile() && byExtension(file)) {
-			loadTask(currentPath.split(path.sep).slice(opts.dir.split('/').length, -1), file);
+			loadTask(currentPath.split('/').slice(opts.dir.split('/').length, -1), file);
 		}
 		else if (stats.isDirectory()) {
 			fs.readdirSync(currentPath)
