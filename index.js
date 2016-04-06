@@ -29,7 +29,7 @@ module.exports = function(options) {
 	}
 
 	if (options) {
-		//cleanDir(options);
+		cleanDir(options);
 	}
 
 	var opts = assign(getDefaults(), options);
